@@ -1,0 +1,290 @@
+$gray: #dddddd;
+$gray-2: #727272;
+$light-gray: #f5f5f5;
+$white: #ffffff;
+$trans-white: rgba(255,255,255,0.07);
+$blue-1: #2095f2;
+$blue-2: #03a9f4;
+$blue-3: #1976d2;
+$pink: #f95d5a;
+$roboto: 'Roboto', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+
+
+
+
+.contact-container{
+   
+    .contact{
+        font-family: $roboto;
+        color: $gray;
+        font-size: 1.1rem;
+    }
+}
+.social{
+        &__icon{
+            width: 25px;
+            height:25px;
+            line-height: 25px;
+            font-size: 14px;
+            text-align: center;
+            border-radius:50%;
+            background-color: $white;
+            color: $blue-1;
+            transition: 0.4s;
+            margin-left:9px;
+            cursor: pointer;
+        }
+        &__icon:hover{
+            background-color: $pink;
+            color: $white;
+        }
+        &__icon--big{
+            width:30px;
+            height:30px;
+            line-height: 30px;
+        }
+    }
+.button{background-color: $blue-1;
+    &__arrow{font-size: 15px;}
+    }
+.hero{
+    background-image: url(../img/overlays/bg1.jpg);
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    height:80vh;
+    &__header, .paragraph{color: $white;}
+    &__header--blue{color: $blue-2;}
+    .scroll-down{
+        width:25px;
+        height:50px;
+        border:solid 2px $white;
+        border-radius:20px;
+    }
+    .scroll-down:hover{
+        cursor: pointer;
+         &:after{
+            content: '\2759';
+            color: $white;
+            display: block;
+            width:5px;
+            margin-left: auto;
+            margin-right: auto;
+            transition: 0.5s;
+        }
+    }
+}
+.service{
+    color: $white;
+    font-family: $roboto;
+    &__spacer{}
+    &__spacer:first-child{background-color: $blue-3;}
+    &__spacer:last-child{background-color: $blue-2;}
+    &__box:nth-child(odd){background-color: $blue-2;}
+    &__box:nth-child(even){background-color: $blue-3;}
+    &__icon{
+        font-size: 50px;
+    }
+}
+.offer{
+    &__icon--theme{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height:40px;
+        border-radius: 50%;
+        font-size: 20px;
+        background-color: $pink;
+        color: $white;
+    }
+    &__header{font-size:20px;}
+    &__paragraph{font-size:14px;}
+}
+.skills{
+    height:500px;
+    background-image: url(../img/overlays/skills.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    &__button--circle{
+        border-radius: 50%;
+        width: 85px;
+        height: 85px;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-shadow: 0 0 0 20px $trans-white !important;
+    }
+    &__play{
+        font-size: 70px;
+        line-height: 85px;
+        color: $pink;
+    }
+}
+.portfolio{
+    .container__img{
+        display: flex;
+        justify-content: center;
+    }
+}
+.team{
+    background-color: $blue-3;
+    color: $white;
+    padding: 100px 0;
+    .card{
+        background-color: $blue-1;
+        border-radius: 0;
+        &__img-container{
+            border-bottom: solid 1px $white;
+            box-sizing: content-box;
+            padding: 0 18px;
+        }
+        &__img{
+        border-radius: 50%; 
+        box-shadow: 0 0 0 10px $white !important;
+        }
+        &__title{font-size: 20px;}
+        &__paragraph{font-size: 14px;}
+        &__social{border-top:solid 1px $white};
+        &__icon{
+            color: $white;
+            padding-top: 20px;
+            transition: 0.2s;
+        }
+        &__icon:hover{
+            color: $pink;
+        }
+    }
+    
+}
+
+.fact{
+    margin: 30px auto;
+    &__content{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 30px 0;
+    }
+    &__header{
+        display: flex;
+    }
+    &__icon{
+        color: $pink;
+        font-size: 30px;
+        margin-right: 16px;
+    }
+}
+.pricing-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 0;
+    &__card{
+        transition: .3s;
+    }
+    .card-subtitle{
+        font-size: 14px;
+    }
+    &__card:hover{
+    transform: scale(1.02);
+     .pricing-table__price{
+        font-weight:bold;
+      }
+        .pricing-table__button{
+            background-color: $pink;
+        }
+    }
+    .card-title{
+        margin-top: 33px;
+    }
+    .card-text{
+        padding-bottom: 35px;
+        color: $blue-1;
+        text-align: center;
+        font-size: 14px;
+    }
+  
+    &__price{font-size: 24px;}
+    &__list{
+        list-style: none;
+        text-transform: uppercase;
+        color: $gray-2;
+        padding: 0;
+        margin: 0;
+        padding-top:42px;
+        border-top: 1px solid $light-gray;
+        
+        li{
+            padding: 16px 100px;
+            text-align: center;
+        }
+    }
+    &__button{
+        margin:35px 0;
+    }
+}
+.lastest-news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 110px 0;
+    &__card{
+        position: relative;
+        padding:0;
+        width:370px;
+        margin:30px;
+        box-shadow: 1px, 1px, 1px, black;
+    }
+    &__button{
+        position: absolute; right:20px; top:281px;
+        background-color: $blue-1;
+        color: $white;
+        border-radius: 50%;
+        border: none;
+        width:40px;
+        height:40px;
+        transition: 0.4s;
+        &:hover{
+            background-color: $pink;
+        }
+    }
+    .card-title{
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: bold !important;
+        margin-top: 35px;
+        margin-left: 20px;
+    }
+    .card-subtitle{
+        font-size: 14px;
+        padding-bottom: 32px;
+        margin-left: 20px;
+    }
+    .card-text{
+        margin:20px;
+    }
+}
+.newsletter{
+    background-color: $light-gray;
+    padding: 120px 0;
+    &__icon{
+        margin-left:10px;
+        font-size: 20px;
+    }
+    &__form{
+        width:45%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        &__input{
+            margin: 60px 0;
+    }
+}
+
+.footer{
+    height: 210px;
+    color: $white;
+}
