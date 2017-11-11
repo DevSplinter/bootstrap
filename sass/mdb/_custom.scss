@@ -7,6 +7,7 @@ $blue-1: #2095f2;
 $blue-2: #03a9f4;
 $blue-3: #1976d2;
 $pink: #f95d5a;
+$black-shadow: rgba(0,0,0,0.4);
 $roboto: 'Roboto', sans-serif;
 $montserrat: 'Montserrat', sans-serif;
 
@@ -174,6 +175,20 @@ $montserrat: 'Montserrat', sans-serif;
         margin-right: 16px;
     }
 }
+.clients{
+    background-color: $light-gray;
+    &__slider{
+        display: flex;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+    &__icon-box{
+        margin:45px;
+        padding: 0 12px;
+    }
+}
 .pricing-table{
     display: flex;
     flex-direction: column;
@@ -181,24 +196,34 @@ $montserrat: 'Montserrat', sans-serif;
     padding: 110px 0;
     &__card{
         transition: .3s;
+        margin: 130px 30px 0 30px;
+        width:370px;
     }
     .card-subtitle{
         font-size: 14px;
     }
     &__card:hover{
-    transform: scale(1.02);
+        transform: scale(1.2);
+        box-shadow: 0 0 20px 6px $black-shadow;
+        z-index:10;
+    
      .pricing-table__price{
         font-weight:bold;
       }
         .pricing-table__button{
             background-color: $pink;
         }
+        .pricing-table__list{
+            border-top: 1px solid $pink;
+        }
     }
     .card-title{
         margin-top: 33px;
+        text-transform: uppercase;
+        font-weight: bold;
     }
     .card-text{
-        padding-bottom: 35px;
+        padding-top:20px;
         color: $blue-1;
         text-align: center;
         font-size: 14px;
@@ -244,9 +269,6 @@ $montserrat: 'Montserrat', sans-serif;
         width:40px;
         height:40px;
         transition: 0.4s;
-        &:hover{
-            background-color: $pink;
-        }
     }
     .card-title{
         text-transform: uppercase;
